@@ -2,32 +2,10 @@
 
 import React, { useEffect } from "react";
 import Image from "../app/favicon.ico";
-import { Blockchain } from "../../srcBlocDatosPersona/blockchain";
-import { Block } from "../../srcBlocDatosPersona/block";
 
 
-const App: React.FC = () => {
-
-  function Guardado() {
-    useEffect(() => {
-        const runBlockchain = async () => {
-            var cripto = {
-                "simbolo": "BTC",
-                "total": "total"
-            };
+const Login:React.FC = () =>{
     
-          const blockchain = new Blockchain();
-    
-          const block = new Block({ data: `Simbolo: ${cripto.simbolo} Total: ${cripto.total}` });
-          await blockchain.addBlock(block);
-    
-          blockchain.print();
-        };
-    
-        runBlockchain();
-      }, []);    
-}
-
   return (
     <div className="h-screen bg-gradient-to-b from-cyan-600 to-teal-800 flex items-center justify-center">
       <main>
@@ -79,6 +57,6 @@ const App: React.FC = () => {
       </main>
     </div>
   );
-};
+}
 
-export default App;
+export default Login;
