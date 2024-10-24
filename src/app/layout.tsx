@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { BitteWalletContextProvider } from "@mintbase-js/react";
+import "@near-wallet-selector/modal-ui/styles.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,3 +35,4 @@ export default function RootLayout({
     </html>
   );
 }
+
